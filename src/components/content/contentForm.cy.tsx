@@ -57,6 +57,9 @@ describe('Form Testing', () => {
 
     cy.get('button[type="submit"]').click();
 
-    cy.get('.input__error').should('have.text', 'Пароли не совпадают');
+    cy.get('[data-testid="password-error"]').should(
+      'have.text',
+      'Пароли не совпадают'
+    );
   });
 });
